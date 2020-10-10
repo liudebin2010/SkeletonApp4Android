@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SkeletonApp</string>
+    <string name="SerializableActivity4Result">Serializable式传递对象</string>
+    <string name="ParcelableActivity4Result">Parcelable式传递对象</string>
+</resources>
