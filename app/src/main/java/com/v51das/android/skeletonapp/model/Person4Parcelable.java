@@ -5,8 +5,6 @@ import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 
-import java.io.Serializable;
-
 public class Person4Parcelable implements Parcelable {
 
     private String name;
@@ -58,5 +56,11 @@ public class Person4Parcelable implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(name);
         dest.writeInt(age);
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "{name:" + name + ",age:" + age + "}";
     }
 }

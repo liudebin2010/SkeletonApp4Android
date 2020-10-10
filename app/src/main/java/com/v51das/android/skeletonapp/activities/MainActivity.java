@@ -1,8 +1,4 @@
-package com.v51das.android.skeletonapp;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+package com.v51das.android.skeletonapp.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,23 +8,33 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.v51das.android.skeletonapp.activities.SerializableActivity4Result;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+import com.v51das.android.skeletonapp.R;
 import com.v51das.android.skeletonapp.model.Person4Parcelable;
 import com.v51das.android.skeletonapp.model.Person4Serializable;
 import com.v51das.android.skeletonapp.utils.LogUtil;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
-    public static final String TAG="MainActivity";
+    public static final String TAG = "MainActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button serializableActivity4Result=findViewById(R.id.serializableActivity4Result);
+        if (savedInstanceState != null) {
+            // 取savedInstanceState中保存的数据
+        } else {
+            // TODO
+        }
+
+        Button serializableActivity4Result = findViewById(R.id.serializableActivity4Result);
         serializableActivity4Result.setOnClickListener(this);
 
-        Button parcelableActivity4Result=findViewById(R.id.parcelableActivity4Result);
+        Button parcelableActivity4Result = findViewById(R.id.parcelableActivity4Result);
         parcelableActivity4Result.setOnClickListener(this);
     }
 
@@ -66,22 +72,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.serializableActivity4Result: //以Java原生序列化的方法通过Intent传递对象
-                Intent serIntent=new Intent(MainActivity.this, SerializableActivity4Result.class);
+                Intent serIntent = new Intent(MainActivity.this, SerializableActivity4Result.class);
                 //以序列化的方式传送对象
-                Person4Serializable ps=new Person4Serializable();
+                Person4Serializable ps = new Person4Serializable();
                 ps.setName("Tim");
                 ps.setAge(20);
-                serIntent.putExtra("person_data",ps);
-                startActivityForResult(serIntent,1);
+                serIntent.putExtra("ser2person_data", ps);
+                startActivityForResult(serIntent, 1);
                 break;
             case R.id.parcelableActivity4Result: //以Parcel的方式通过Intent传递对象
-                Intent parIntent=new Intent(MainActivity.this, ParcelA.class);
-                Person4Parcelable pp=new Person4Parcelable();
+                Intent parIntent = new Intent(MainActivity.this, ParcelableActivity4Result.class);
+                Person4Parcelable pp = new Person4Parcelable();
                 pp.setName("Tom");
                 pp.setAge(26);
-                parIntent.putExtra("par2person_data",parIntent);
+                parIntent.putExtra("par2person_data", pp);
+                startActivityForResult(parIntent, 2);
                 break;
         }
     }
@@ -97,6 +104,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
             case 1:
+            case 2:
                 if (resultCode == RESULT_OK) {
                     String retData = data.getStringExtra("data_return");
                     LogUtil.d(TAG, retData);
@@ -104,5 +112,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             default:
         }
+    }
+
+    /**
+     * 当返回是通过Back键返回时的处理
+     */
+    @Override
+    public void onBackPressed() {
+        // TODO
+    }
+
+    /**
+     * 用于活动由于资源不足被系统回收时临时保存数据，活动恢复时可以继续使用数据
+     *
+     * @param outState
+     */
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        // TODO
     }
 }
