@@ -36,6 +36,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         Button parcelableActivity4Result = findViewById(R.id.parcelableActivity4Result);
         parcelableActivity4Result.setOnClickListener(this);
+
+        Button customControl4Title = findViewById(R.id.customControl4Title);
+        customControl4Title.setOnClickListener(this);
     }
 
     //**********************************************start-菜单********************************//
@@ -90,6 +93,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 parIntent.putExtra("par2person_data", pp);
                 startActivityForResult(parIntent, 2);
                 break;
+            case R.id.customControl4Title:
+                Intent cusIntent = new Intent(MainActivity.this, CustomControl4Title.class);
+                startActivity(cusIntent);
         }
     }
 

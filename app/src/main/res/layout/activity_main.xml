@@ -9,13 +9,20 @@
         android:text="@string/SerializableActivity4Result"
         android:textAllCaps="false"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/parcelableActivity4Result"
         android:text="@string/ParcelableActivity4Result"
         android:textAllCaps="false"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/customControl4Title"
+        android:text="@string/CustomControl4Title"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
