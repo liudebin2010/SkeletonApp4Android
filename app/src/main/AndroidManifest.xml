@@ -25,6 +25,7 @@
         </activity>
         <activity android:name=".activities.SerializableActivity4Result" />
         <activity android:name=".activities.ParcelableActivity4Result" />
+        <activity android:name=".activities.ListViewActivity" />
     </application>
 
 </manifest>

@@ -39,6 +39,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         Button customControl4Title = findViewById(R.id.customControl4Title);
         customControl4Title.setOnClickListener(this);
+
+        Button listview = findViewById(R.id.list_view);
+        listview.setOnClickListener(this);
     }
 
     //**********************************************start-菜单********************************//
@@ -96,6 +99,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.customControl4Title:
                 Intent cusIntent = new Intent(MainActivity.this, CustomControl4Title.class);
                 startActivity(cusIntent);
+            case R.id.list_view:
+                Intent lvIntent = new Intent(MainActivity.this, ListViewActivity.class);
+                startActivity(lvIntent);
         }
     }
 
