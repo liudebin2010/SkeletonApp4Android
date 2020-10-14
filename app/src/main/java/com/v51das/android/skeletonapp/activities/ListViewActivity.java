@@ -44,13 +44,13 @@ public class ListViewActivity extends BaseActivity {
             fruitList.add(apple);
             Fruit banana = new Fruit("Banana", R.drawable.banana_pic);
             fruitList.add(banana);
-            Fruit orangle = new Fruit("Orangle", R.drawable.orangle_pic);
+            Fruit orangle = new Fruit("Orangle", R.drawable.orange_pic);
             fruitList.add(orangle);
             Fruit grape = new Fruit("Grape", R.drawable.grape_pic);
             fruitList.add(grape);
             Fruit pear = new Fruit("Pear", R.drawable.apple_pic);
             fruitList.add(pear);
-            Fruit watemelon = new Fruit("Watemelon", R.drawable.watemelon_pic);
+            Fruit watemelon = new Fruit("Watemelon", R.drawable.watermelon_pic);
             fruitList.add(watemelon);
             Fruit pineapple = new Fruit("Pineapple", R.drawable.pineapple_pic);
             fruitList.add(pineapple);

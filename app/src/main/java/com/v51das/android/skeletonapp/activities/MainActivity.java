@@ -99,9 +99,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.customControl4Title:
                 Intent cusIntent = new Intent(MainActivity.this, CustomControl4Title.class);
                 startActivity(cusIntent);
+                break;
             case R.id.list_view:
                 Intent lvIntent = new Intent(MainActivity.this, ListViewActivity.class);
                 startActivity(lvIntent);
+                break;
         }
     }
 
