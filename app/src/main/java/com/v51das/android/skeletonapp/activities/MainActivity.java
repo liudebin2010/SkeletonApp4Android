@@ -42,6 +42,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         Button listview = findViewById(R.id.list_view);
         listview.setOnClickListener(this);
+
+        Button recycleview = findViewById(R.id.recycler_view);
+        recycleview.setOnClickListener(this);
     }
 
     //**********************************************start-菜单********************************//
@@ -80,7 +83,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.serializableActivity4Result: //以Java原生序列化的方法通过Intent传递对象
-                Intent serIntent = new Intent(MainActivity.this, SerializableActivity4Result.class);
+                Intent serIntent = new Intent(MainActivity.this, SerializableActivity4ResultActivity.class);
                 //以序列化的方式传送对象
                 Person4Serializable ps = new Person4Serializable();
                 ps.setName("Tim");
@@ -89,7 +92,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivityForResult(serIntent, 1);
                 break;
             case R.id.parcelableActivity4Result: //以Parcel的方式通过Intent传递对象
-                Intent parIntent = new Intent(MainActivity.this, ParcelableActivity4Result.class);
+                Intent parIntent = new Intent(MainActivity.this, ParcelableActivity4ResultActivity.class);
                 Person4Parcelable pp = new Person4Parcelable();
                 pp.setName("Tom");
                 pp.setAge(26);
@@ -97,12 +100,16 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivityForResult(parIntent, 2);
                 break;
             case R.id.customControl4Title:
-                Intent cusIntent = new Intent(MainActivity.this, CustomControl4Title.class);
+                Intent cusIntent = new Intent(MainActivity.this, CustomControl4TitleAcivity.class);
                 startActivity(cusIntent);
                 break;
             case R.id.list_view:
                 Intent lvIntent = new Intent(MainActivity.this, ListViewActivity.class);
                 startActivity(lvIntent);
+                break;
+            case R.id.recycler_view:
+                Intent rvIntent = new Intent(MainActivity.this, RecyclerViewActivity.class);
+                startActivity(rvIntent);
                 break;
         }
     }

@@ -12,10 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activities.RecyclerViewActivity"></activity>
         <activity
-            android:name=".activities.CustomControl4Title"
+            android:name=".activities.CustomControl4TitleAcivity"
             android:label="@string/title_activity_custom_control4_title"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,8 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.SerializableActivity4Result" />
-        <activity android:name=".activities.ParcelableActivity4Result" />
+        <activity android:name=".activities.SerializableActivity4ResultActivity" />
+        <activity android:name=".activities.ParcelableActivity4ResultActivity" />
         <activity android:name=".activities.ListViewActivity" />
     </application>
 

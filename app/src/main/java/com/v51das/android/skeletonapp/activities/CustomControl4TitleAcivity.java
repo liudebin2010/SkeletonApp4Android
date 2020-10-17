@@ -6,7 +6,7 @@ import androidx.appcompat.app.ActionBar;
 
 import com.v51das.android.skeletonapp.R;
 
-public class CustomControl4Title extends BaseActivity {
+public class CustomControl4TitleAcivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
