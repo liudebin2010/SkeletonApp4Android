@@ -45,6 +45,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         Button recycleview = findViewById(R.id.recycler_view);
         recycleview.setOnClickListener(this);
+
+        Button rvVertview = findViewById(R.id.rv_vertview);
+        rvVertview.setOnClickListener(this);
+
+        Button rvWaterfallview = findViewById(R.id.rv_waterfallview);
+        rvWaterfallview.setOnClickListener(this);
     }
 
     //**********************************************start-菜单********************************//
@@ -110,6 +116,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.recycler_view:
                 Intent rvIntent = new Intent(MainActivity.this, RecyclerViewActivity.class);
                 startActivity(rvIntent);
+                break;
+            case R.id.rv_vertview:
+                Intent rvvIntent = new Intent(MainActivity.this, RvVerticalActivity.class);
+                startActivity(rvvIntent);
+                break;
+            case R.id.rv_waterfallview:
+                Intent wvIntent = new Intent(MainActivity.this, RvWaterfallActivity.class);
+                startActivity(wvIntent);
                 break;
         }
     }

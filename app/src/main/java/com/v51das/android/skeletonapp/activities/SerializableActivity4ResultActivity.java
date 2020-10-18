@@ -21,7 +21,7 @@ public class SerializableActivity4ResultActivity extends BaseActivity implements
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.serialiable_activity4result);
+        setContentView(R.layout.activity_serialiable4result);
 
         //若Activity被系统回收时保存有数据，则直接取保存的数据
         if (savedInstanceState != null) {

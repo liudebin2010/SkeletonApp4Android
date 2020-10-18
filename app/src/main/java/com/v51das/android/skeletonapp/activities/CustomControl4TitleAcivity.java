@@ -11,7 +11,7 @@ public class CustomControl4TitleAcivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.custom_control4title);
+        setContentView(R.layout.activity_custom_ctl4title);
 
         //将系统自带的标题栏隐藏掉
         ActionBar actionBar = getSupportActionBar();

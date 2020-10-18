@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.RecyclerViewActivity"></activity>
+        <activity android:name=".activities.RvWaterfallActivity"></activity>
+        <activity android:name=".activities.RvVerticalActivity" />
+        <activity android:name=".activities.RecyclerViewActivity" />
         <activity
             android:name=".activities.CustomControl4TitleAcivity"
             android:label="@string/title_activity_custom_control4_title"

@@ -6,26 +6,28 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.v51das.android.skeletonapp.R;
-import com.v51das.android.skeletonapp.adapter.Fruit4RvAdapter;
+import com.v51das.android.skeletonapp.adapter.Fruit4RvVerticalAdapter;
 import com.v51das.android.skeletonapp.model.Fruit;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecyclerViewActivity extends BaseActivity {
+public class RvVerticalActivity extends BaseActivity {
 
     private List<Fruit> fruitList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recyclerview);
+        setContentView(R.layout.activity_rv_vertical);
         initFruits();
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
-        Fruit4RvAdapter f4rAdapter = new Fruit4RvAdapter(fruitList);
+
+        RecyclerView recyclerView = findViewById(R.id.rv_vert);
         LinearLayoutManager llm = new LinearLayoutManager(this);
+        llm.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerView.setLayoutManager(llm);
-        recyclerView.setAdapter(f4rAdapter);
+        Fruit4RvVerticalAdapter adapter = new Fruit4RvVerticalAdapter(fruitList);
+        recyclerView.setAdapter(adapter);
     }
 
     private void initFruits() {

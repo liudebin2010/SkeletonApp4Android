@@ -22,7 +22,7 @@ public class ListViewActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.listview);
+        setContentView(R.layout.activity_listview);
 
         initFruits();//初始化水果数据
         FruitAdapter adapter = new FruitAdapter(ListViewActivity.this, R.layout.fruit_item, fruitList);

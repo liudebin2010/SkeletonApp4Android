@@ -15,4 +15,6 @@
     <string name="title_text">Title Text</string>
     <string name="listview">ListView用法</string>
     <string name="recyclerview">RecyclerView用法</string>
+    <string name="rvvert">横向流动</string>
+    <string name="rvWaterfallView">瀑布流</string>
 </resources>
