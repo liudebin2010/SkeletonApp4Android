@@ -51,6 +51,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         Button rvWaterfallview = findViewById(R.id.rv_waterfallview);
         rvWaterfallview.setOnClickListener(this);
+
+        Button uipractice = findViewById(R.id.ui_practice);
+        uipractice.setOnClickListener(this);
     }
 
     //**********************************************start-菜单********************************//
@@ -124,6 +127,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.rv_waterfallview:
                 Intent wvIntent = new Intent(MainActivity.this, RvWaterfallActivity.class);
                 startActivity(wvIntent);
+                break;
+            case R.id.ui_practice:
+                Intent uiIntent = new Intent(MainActivity.this, UIBestPracticeActivity.class);
+                startActivity(uiIntent);
                 break;
         }
     }

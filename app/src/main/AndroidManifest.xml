@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.RvWaterfallActivity"></activity>
+        <activity android:name=".activities.UIBestPracticeActivity"></activity>
+        <activity android:name=".activities.RvWaterfallActivity" />
         <activity android:name=".activities.RvVerticalActivity" />
         <activity android:name=".activities.RecyclerViewActivity" />
         <activity

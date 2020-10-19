@@ -14,7 +14,9 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_text">Title Text</string>
     <string name="listview">ListView用法</string>
-    <string name="recyclerview">RecyclerView用法</string>
-    <string name="rvvert">横向流动</string>
+
+    <string name="recyclerview">RecyView</string>
+    <string name="rvvert">横向</string>
     <string name="rvWaterfallView">瀑布流</string>
+    <string name="uipractice">综合应用</string>
 </resources>

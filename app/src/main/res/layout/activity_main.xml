@@ -60,6 +60,15 @@
             android:layout_weight="1"
             android:text="@string/rvWaterfallView"
             android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/ui_practice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/uipractice"
+            android:textAllCaps="false" />
     </LinearLayout>
+
 
 </LinearLayout>
