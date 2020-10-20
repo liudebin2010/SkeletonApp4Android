@@ -54,6 +54,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         Button uipractice = findViewById(R.id.ui_practice);
         uipractice.setOnClickListener(this);
+
+        Button fragBtn = findViewById(R.id.frag_btn);
+        fragBtn.setOnClickListener(this);
     }
 
     //**********************************************start-菜单********************************//
@@ -131,6 +134,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.ui_practice:
                 Intent uiIntent = new Intent(MainActivity.this, UIBestPracticeActivity.class);
                 startActivity(uiIntent);
+                break;
+            case R.id.frag_btn:
+                Intent fragIntent = new Intent(MainActivity.this, NewsContentActivity.class);
+                startActivity(fragIntent);
                 break;
         }
     }

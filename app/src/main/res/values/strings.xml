@@ -19,4 +19,5 @@
     <string name="rvvert">横向</string>
     <string name="rvWaterfallView">瀑布流</string>
     <string name="uipractice">综合应用</string>
+    <string name="frag_btn">Fragment</string>
 </resources>

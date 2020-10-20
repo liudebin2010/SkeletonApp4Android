@@ -70,5 +70,11 @@
             android:textAllCaps="false" />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/frag_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/frag_btn"
+        android:textAllCaps="false" />
 
 </LinearLayout>
