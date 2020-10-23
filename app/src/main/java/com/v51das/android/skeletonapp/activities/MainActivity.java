@@ -136,7 +136,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(uiIntent);
                 break;
             case R.id.frag_btn:
-                Intent fragIntent = new Intent(MainActivity.this, NewsContentActivity.class);
+                Intent fragIntent = new Intent(MainActivity.this, NewsActivity.class);
                 startActivity(fragIntent);
                 break;
         }

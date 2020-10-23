@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import com.v51das.android.skeletonapp.R;
 
 public class FragNewsContent extends Fragment {
+
     private View view;
 
     @Nullable
@@ -27,7 +28,7 @@ public class FragNewsContent extends Fragment {
         visibilityLayout.setVisibility(View.VISIBLE);
         TextView newsTitleText = view.findViewById(R.id.news_title);
         TextView newsContentText = view.findViewById(R.id.news_content);
-        newsTitleText.setText(newsTitle);
-        newsContentText.setText(newsContent);
+        newsTitleText.setText(newsTitle);// 刷新新闻的标题
+        newsContentText.setText(newsContent);// 刷新新闻的内容
     }
 }

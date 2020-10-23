@@ -20,6 +20,7 @@ import java.util.List;
 import java.util.Random;
 
 public class FragNewsTitle extends Fragment {
+
     private boolean isTwoPane;
 
     @Nullable
@@ -40,6 +41,7 @@ public class FragNewsTitle extends Fragment {
             News news = new News();
             news.setTitle("This is news title " + i);
             news.setContent(getRandomLengthContent("Thist is news content " + i + "."));
+            newsList.add(news);
         }
         return newsList;
     }
@@ -59,9 +61,9 @@ public class FragNewsTitle extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         if (getActivity().findViewById(R.id.news_content_layout) != null) {
-            isTwoPane = true;
+            isTwoPane = true;// 可以找到news_content_layout布局时，为双页模式
         } else {
-            isTwoPane = false;
+            isTwoPane = false;// 找不到news_content_layout布局时，为单页模式
         }
     }
 
@@ -80,7 +82,6 @@ public class FragNewsTitle extends Fragment {
                     if (isTwoPane) {
                         FragNewsContent fragNewsContent = (FragNewsContent) getFragmentManager().findFragmentById(R.id.news_content_fragment);
                         fragNewsContent.refresh(news.getTitle(), news.getContent());
-
                     } else {
                         NewsContentActivity.actionStart(getActivity(), news.getTitle(), news.getContent());
                     }
