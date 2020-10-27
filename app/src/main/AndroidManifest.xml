@@ -3,6 +3,7 @@
     package="com.v51das.android.skeletonapp">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:name=".utils.AppCtxUtil"
@@ -12,14 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.UIBestPracticeActivity"></activity>
-        <activity android:name=".activities.RvWaterfallActivity" />
-        <activity android:name=".activities.RvVerticalActivity" />
-        <activity android:name=".activities.RecyclerViewActivity" />
-        <activity
-            android:name=".activities.CustomControl4TitleAcivity"
-            android:label="@string/title_activity_custom_control4_title"
-            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.BcEgActivity" />
+        <activity android:name=".activities.BcLclActivity" />
+        <activity android:name=".activities.BcCutActivity" />
+        <activity android:name=".activities.BcOrdActivity" />
+        <activity android:name=".activities.BcStdActivity" />
         <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,11 +25,44 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activities.CustomControl4TitleAcivity"
+            android:label="@string/title_activity_custom_control4_title"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.UIBestPracticeActivity" />
+        <activity android:name=".activities.RvWaterfallActivity" />
+        <activity android:name=".activities.RvVerticalActivity" />
+        <activity android:name=".activities.RecyclerViewActivity" />
         <activity android:name=".activities.SerializableActivity4ResultActivity" />
         <activity android:name=".activities.ParcelableActivity4ResultActivity" />
         <activity android:name=".activities.ListViewActivity" />
         <activity android:name=".activities.NewsActivity" />
         <activity android:name=".activities.NewsContentActivity" />
+
+        <receiver
+            android:name=".bc.receiver.BootComplateReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".bc.receiver.MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.v51das.android.skeletonapp.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".bc.receiver.AnotherBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="com.v51das.android.skeletonapp.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

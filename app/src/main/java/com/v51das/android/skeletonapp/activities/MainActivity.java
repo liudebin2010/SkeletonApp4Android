@@ -57,6 +57,21 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         Button fragBtn = findViewById(R.id.frag_btn);
         fragBtn.setOnClickListener(this);
+
+        Button bc_std = findViewById(R.id.bc_std);
+        bc_std.setOnClickListener(this);
+
+        Button bc_ord = findViewById(R.id.bc_ord);
+        bc_ord.setOnClickListener(this);
+
+        Button bc_cut = findViewById(R.id.bc_cut);
+        bc_cut.setOnClickListener(this);
+
+        Button bc_lcl = findViewById(R.id.bc_lcl);
+        bc_lcl.setOnClickListener(this);
+
+        Button bc_eg = findViewById(R.id.bc_eg);
+        bc_eg.setOnClickListener(this);
     }
 
     //**********************************************start-菜单********************************//
@@ -139,6 +154,28 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 Intent fragIntent = new Intent(MainActivity.this, NewsActivity.class);
                 startActivity(fragIntent);
                 break;
+            case R.id.bc_std:
+                Intent bcStdIntent = new Intent(MainActivity.this, BcStdActivity.class);
+                startActivity(bcStdIntent);
+                break;
+            case R.id.bc_ord:
+                Intent bcordIntent = new Intent(MainActivity.this, BcOrdActivity.class);
+                startActivity(bcordIntent);
+                break;
+            case R.id.bc_cut:
+                Intent bccutIntent = new Intent(MainActivity.this, BcCutActivity.class);
+                startActivity(bccutIntent);
+                break;
+            case R.id.bc_lcl:
+                Intent bclclIntent = new Intent(MainActivity.this, BcLclActivity.class);
+                startActivity(bclclIntent);
+                break;
+            case R.id.bc_eg:
+                Intent bcegIntent = new Intent(MainActivity.this, BcEgActivity.class);
+                startActivity(bcegIntent);
+                break;
+
+
         }
     }
 

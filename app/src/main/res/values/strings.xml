@@ -20,4 +20,10 @@
     <string name="rvWaterfallView">瀑布流</string>
     <string name="uipractice">综合应用</string>
     <string name="frag_btn">Fragment</string>
+    <string name="bc_std">标准</string>
+    <string name="bc_ord">有序</string>
+    <string name="bc_lcl">本地</string>
+    <string name="bc_cut">自定义</string>
+    <string name="bc_eg">广播实例：强制下线</string>
+    <string name="title_activity_bc_login">BcLoginActivity</string>
 </resources>
