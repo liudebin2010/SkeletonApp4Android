@@ -13,6 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activities.DpSpFileActivity"></activity>
+        <activity android:name=".activities.DpFileActivity" />
+        <activity android:name=".activities.BcEgMainActivity" />
         <activity android:name=".activities.BcEgActivity" />
         <activity android:name=".activities.BcLclActivity" />
         <activity android:name=".activities.BcCutActivity" />

@@ -79,6 +79,7 @@
         android:text="@string/frag_btn"
         android:textAllCaps="false" />
 
+    <!--start:broadcast-->
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
@@ -124,5 +125,35 @@
         android:layout_height="wrap_content"
         android:text="@string/bc_eg"
         android:textAllCaps="false" />
+
+    <!--start:data persistent-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dp_file"
+            android:text="文件操作"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dp_sp"
+            android:text="SharedPref"
+            android:layout_weight="1"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dp_sp_rmb"
+            android:text="sp记住密码"
+            android:layout_weight="1"
+            android:textAllCaps="false" />
+    </LinearLayout>
 
 </LinearLayout>
