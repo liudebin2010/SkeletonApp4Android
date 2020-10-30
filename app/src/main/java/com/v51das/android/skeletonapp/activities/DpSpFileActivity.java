@@ -1,5 +1,6 @@
 package com.v51das.android.skeletonapp.activities;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
@@ -33,6 +34,12 @@ public class DpSpFileActivity extends AppCompatActivity {
             LogUtil.d("DpSpFileActivity", "name is " + name);
             LogUtil.d("DpSpFileActivity", "age is " + age);
             LogUtil.d("DpSpFileActivity", "married is " + married);
+        });
+
+        Button dp_sp_rmb = findViewById(R.id.dp_sp_rmb);
+        dp_sp_rmb.setOnClickListener(v -> {
+            Intent dpSpRmbfIntent = new Intent(DpSpFileActivity.this, BcEgActivity.class);
+            startActivity(dpSpRmbfIntent);
         });
     }
 }

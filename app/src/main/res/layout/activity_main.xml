@@ -136,7 +136,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/dp_file"
-            android:text="文件操作"
+            android:text="文件"
             android:layout_weight="1" />
 
         <Button
@@ -150,8 +150,8 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/dp_sp_rmb"
-            android:text="sp记住密码"
+            android:id="@+id/dp_db_cd"
+            android:text="Db操作"
             android:layout_weight="1"
             android:textAllCaps="false" />
     </LinearLayout>

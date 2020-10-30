@@ -2,6 +2,9 @@ package com.v51das.android.skeletonapp.utils;
 
 import android.app.Application;
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+
+import org.litepal.LitePal;
 
 /**
  * Android提供的Application类，每当程序啓動時，系統就會自動將這個類進行初始化。
@@ -16,6 +19,10 @@ public class AppCtxUtil extends Application {
         super.onCreate();
         ctx = getApplicationContext();
         // TODO 此处可以添更多系统启动时需要初始化的类
+        /*=================litepal数据库=====================*/
+        LitePal.initialize(this);
+        //获取到SQLiteDatabase的实例，创建数据库表
+        SQLiteDatabase db = LitePal.getDatabase();
     }
 
     public static Context getContext(){

@@ -79,8 +79,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         Button dp_sp = findViewById(R.id.dp_sp);
         dp_sp.setOnClickListener(this);
 
-        Button dp_sp_rmb = findViewById(R.id.dp_sp_rmb);
-        dp_sp_rmb.setOnClickListener(this);
+        Button dp_db_cd = findViewById(R.id.dp_db_cd);
+        dp_db_cd.setOnClickListener(this);
     }
 
     //**********************************************start-菜单********************************//
@@ -191,9 +191,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 Intent dpSpfIntent = new Intent(MainActivity.this, DpSpFileActivity.class);
                 startActivity(dpSpfIntent);
                 break;
-            case R.id.dp_sp_rmb:
-                Intent dpSpRmbfIntent = new Intent(MainActivity.this, BcEgActivity.class);
-                startActivity(dpSpRmbfIntent);
+            case R.id.dp_db_cd:
+                Intent dpDbCdIntent = new Intent(MainActivity.this, DpDbCdActivity.class);
+                startActivity(dpDbCdIntent);
                 break;
         }
     }
