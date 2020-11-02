@@ -1,18 +1,18 @@
 <resources>
     <string name="app_name">SkeletonApp</string>
-    <string name="SerializableActivity4Result">Serializable式传递对象</string>
-    <string name="ParcelableActivity4Result">Parcelable式传递对象</string>
+    <string name="SerializableActivity4Result">Serial式传递</string>
+    <string name="ParcelableActivity4Result">Parcel式传递</string>
     <string name="CustomControl4Title">自定义控件</string>
     <string name="title_activity_custom_control4_title">CustomControl4Title</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="title_text">Title Text</string>
-    <string name="listview">ListView用法</string>
+    <string name="listview">ListV</string>
 
-    <string name="recyclerview">RecyView</string>
+    <string name="recyclerview">RecyV</string>
     <string name="rvvert">横向</string>
     <string name="rvWaterfallView">瀑布流</string>
-    <string name="uipractice">综合应用</string>
+    <string name="uipractice">综合</string>
     <string name="frag_btn">Fragment</string>
     <string name="bc_std">标准</string>
     <string name="bc_ord">有序</string>

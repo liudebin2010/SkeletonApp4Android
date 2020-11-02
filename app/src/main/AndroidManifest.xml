@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:name=".utils.AppCtxUtil"
@@ -13,7 +15,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.DpDbCdActivity"></activity>
+        <provider
+            android:name=".cp.provider.MyContentProvider"
+            android:authorities="com.v51das.andoid.skeletonapp.provider"
+            android:enabled="true"
+            android:exported="true"></provider>
+
+        <activity android:name=".activities.Cp4CustActivity" />
+        <activity android:name=".activities.Cp4ReadContentActivity" />
+        <activity android:name=".activities.Cp4RtPermActivity" />
+        <activity android:name=".activities.DpDbCdActivity" />
         <activity android:name=".activities.DpSpFileActivity" />
         <activity android:name=".activities.DpFileActivity" />
         <activity android:name=".activities.BcEgMainActivity" />

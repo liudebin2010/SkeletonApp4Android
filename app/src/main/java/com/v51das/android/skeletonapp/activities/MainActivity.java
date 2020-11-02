@@ -81,6 +81,15 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         Button dp_db_cd = findViewById(R.id.dp_db_cd);
         dp_db_cd.setOnClickListener(this);
+
+        Button rt_perm = findViewById(R.id.rt_perm);
+        rt_perm.setOnClickListener(this);
+
+        Button read_contect = findViewById(R.id.read_contect);
+        read_contect.setOnClickListener(this);
+
+        Button cust_cp = findViewById(R.id.cust_cp);
+        cust_cp.setOnClickListener(this);
     }
 
     //**********************************************start-菜单********************************//
@@ -194,6 +203,18 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.dp_db_cd:
                 Intent dpDbCdIntent = new Intent(MainActivity.this, DpDbCdActivity.class);
                 startActivity(dpDbCdIntent);
+                break;
+            case R.id.rt_perm:
+                Intent rtPermIntent = new Intent(MainActivity.this, Cp4RtPermActivity.class);
+                startActivity(rtPermIntent);
+                break;
+            case R.id.read_contect:
+                Intent rcPermIntent = new Intent(MainActivity.this, Cp4ReadContentActivity.class);
+                startActivity(rcPermIntent);
+                break;
+            case R.id.cust_cp:
+                Intent ccpPermIntent = new Intent(MainActivity.this, Cp4CustActivity.class);
+                startActivity(ccpPermIntent);
                 break;
         }
     }

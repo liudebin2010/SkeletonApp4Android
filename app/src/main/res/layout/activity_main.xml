@@ -5,19 +5,27 @@
     android:layout_height="wrap_content"
     android:scrollbars="vertical">
 
-    <Button
-        android:id="@+id/serializableActivity4Result"
-        android:text="@string/SerializableActivity4Result"
-        android:textAllCaps="false"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/parcelableActivity4Result"
-        android:text="@string/ParcelableActivity4Result"
-        android:textAllCaps="false"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/serializableActivity4Result"
+            android:text="@string/SerializableActivity4Result"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/parcelableActivity4Result"
+            android:text="@string/ParcelableActivity4Result"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/customControl4Title"
@@ -26,13 +34,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/list_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/listview"
-        android:textAllCaps="false" />
-
     <LinearLayout
         android:id="@+id/id_rv"
         android:layout_width="match_parent"
@@ -40,10 +41,18 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/list_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/listview"
+            android:textAllCaps="false" />
+
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/recycler_view"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:text="@string/recyclerview"
             android:textAllCaps="false" />
 
@@ -59,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/rv_waterfallview"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:text="@string/rvWaterfallView"
             android:textAllCaps="false" />
 
@@ -155,5 +164,31 @@
             android:layout_weight="1"
             android:textAllCaps="false" />
     </LinearLayout>
+    <!-- ContentProvider -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rt_perm"
+            android:layout_weight="1"
+            android:text="运行时授权" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/read_contect"
+            android:layout_weight="1"
+            android:text="读取联系人" />
+        <!--  -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cust_cp"
+            android:layout_weight="1"
+            android:text="访问自定义CP示例" />
+    </LinearLayout>
 </LinearLayout>
