@@ -2,10 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.v51das.android.skeletonapp">
 
+    <!--存取网络状态-->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--接收开机通知权限-->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!--呼叫电话权限-->
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!--读取通讯录权限-->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!--振动权限-->
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:name=".utils.AppCtxUtil"
@@ -15,11 +21,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activities.BasicNotificationActivity"></activity>
+        <activity android:name=".activities.MediaNotifyActivity" />
+
         <provider
             android:name=".cp.provider.MyContentProvider"
             android:authorities="com.v51das.andoid.skeletonapp.provider"
             android:enabled="true"
-            android:exported="true"></provider>
+            android:exported="true" />
 
         <activity android:name=".activities.Cp4CustActivity" />
         <activity android:name=".activities.Cp4ReadContentActivity" />

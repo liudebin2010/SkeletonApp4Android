@@ -90,6 +90,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         Button cust_cp = findViewById(R.id.cust_cp);
         cust_cp.setOnClickListener(this);
+
+        Button media_notify = findViewById(R.id.media_notify);
+        media_notify.setOnClickListener(this);
     }
 
     //**********************************************start-菜单********************************//
@@ -215,6 +218,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.cust_cp:
                 Intent ccpPermIntent = new Intent(MainActivity.this, Cp4CustActivity.class);
                 startActivity(ccpPermIntent);
+                break;
+            case R.id.media_notify:
+                Intent mnIntent = new Intent(MainActivity.this, MediaNotifyActivity.class);
+                startActivity(mnIntent);
                 break;
         }
     }
