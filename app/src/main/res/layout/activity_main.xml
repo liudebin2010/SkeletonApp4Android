@@ -203,5 +203,26 @@
             android:layout_weight="1"
             android:id="@+id/media_notify"
             android:text="通知" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/media_camera"
+            android:text="拍照" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/media_audio"
+            android:text="播放音频" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/media_video"
+            android:text="播放视频" />
     </LinearLayout>
 </LinearLayout>

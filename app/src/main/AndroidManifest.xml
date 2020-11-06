@@ -2,16 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.v51das.android.skeletonapp">
 
-    <!--存取网络状态-->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!--接收开机通知权限-->
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <!--呼叫电话权限-->
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <!--读取通讯录权限-->
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <!--振动权限-->
-    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 存取网络状态 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- 接收开机通知权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 呼叫电话权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- 读取通讯录权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 振动权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".utils.AppCtxUtil"
@@ -21,7 +17,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.BasicNotificationActivity"></activity>
+
+        <activity android:name=".activities.MediaVideoActivity" />
+        <activity android:name=".activities.MediaAudioActivity" />
+        <activity android:name=".activities.MediaCameraActivity" />
+        <activity android:name=".activities.BasicNotificationActivity" />
         <activity android:name=".activities.MediaNotifyActivity" />
 
         <provider
@@ -29,6 +29,15 @@
             android:authorities="com.v51das.andoid.skeletonapp.provider"
             android:enabled="true"
             android:exported="true" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.v51das.android.skeletonapp.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 
         <activity android:name=".activities.Cp4CustActivity" />
         <activity android:name=".activities.Cp4ReadContentActivity" />

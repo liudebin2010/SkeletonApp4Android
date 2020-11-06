@@ -38,7 +38,7 @@ public class MediaNotifyActivity extends BaseActivity implements View.OnClickLis
                 NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                 Notification notification = new NotificationCompat.Builder(this)
                         .setContentTitle("This is content title")
-                        .setContentText("This is content text")
+                        .setContentText("ghfghdfghf fghfhj jghjfghj ghfghdfghf fghfhj jghjfghj ghfghdfghf fghfhj jghjfghj ghfghdfghf fghfhj jghjfghj ghfghdfghf fghfhj jghjfghj ghfghdfghf fghfhj jghjfghj ")
                         .setWhen(System.currentTimeMillis())
                         .setSmallIcon(R.mipmap.ic_launcher)
                         .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher))
@@ -46,10 +46,10 @@ public class MediaNotifyActivity extends BaseActivity implements View.OnClickLis
                         .setVibrate(new long[]{0, 1000, 1000, 1000})//接收到通知时振动
                         .setLights(Color.GREEN, 1000, 1000)//接收到通知时LED灯闪烁
                         .setContentIntent(pendingIntent)//关联点击事件
-                        .setDefaults(NotificationCompat.DEFAULT_ALL)//接收到通知时默认效果
+                        //.setDefaults(NotificationCompat.DEFAULT_ALL)//接收到通知时默认效果
                         .setAutoCancel(true)//被点击后关闭通知，也可执行manager.cancel(1)达到同样的效果;
                         .setPriority(NotificationCompat.PRIORITY_MAX)//设置通知的重要程度
-                        .setStyle(new NotificationCompat.BigTextStyle().bigText(""))//设置显示长文本
+                        .setStyle(new NotificationCompat.BigTextStyle().bigText("ghfghdfghf fghfhj jghjfghj ghfghdfghf fghfhj jghjfghj ghfghdfghf fghfhj jghjfghj ghfghdfghf fghfhj jghjfghj ghfghdfghf fghfhj jghjfghj ghfghdfghf fghfhj jghjfghj "))//设置显示长文本
                         .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(BitmapFactory.decodeResource(getResources(), R.drawable.big_image)))//设置通知图片
                         .build();
                 manager.notify(1, notification);

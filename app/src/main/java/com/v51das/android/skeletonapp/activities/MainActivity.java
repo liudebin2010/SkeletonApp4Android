@@ -93,6 +93,15 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         Button media_notify = findViewById(R.id.media_notify);
         media_notify.setOnClickListener(this);
+
+        Button media_camera = findViewById(R.id.media_camera);
+        media_camera.setOnClickListener(this);
+
+        Button media_audio = findViewById(R.id.media_audio);
+        media_audio.setOnClickListener(this);
+
+        Button media_video = findViewById(R.id.media_video);
+        media_video.setOnClickListener(this);
     }
 
     //**********************************************start-菜单********************************//
@@ -223,6 +232,19 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 Intent mnIntent = new Intent(MainActivity.this, MediaNotifyActivity.class);
                 startActivity(mnIntent);
                 break;
+            case R.id.media_camera:
+                Intent mcIntent = new Intent(MainActivity.this, MediaCameraActivity.class);
+                startActivity(mcIntent);
+                break;
+            case R.id.media_audio:
+                Intent maIntent = new Intent(MainActivity.this, MediaAudioActivity.class);
+                startActivity(maIntent);
+                break;
+            case R.id.media_video:
+                Intent mvIntent = new Intent(MainActivity.this, MediaVideoActivity.class);
+                startActivity(mvIntent);
+                break;
+
         }
     }
 
