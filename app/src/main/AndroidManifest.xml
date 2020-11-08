@@ -7,7 +7,8 @@
     <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 呼叫电话权限 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- 读取通讯录权限 -->
     <uses-permission android:name="android.permission.VIBRATE" /> <!-- 振动权限 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 写SD权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".utils.AppCtxUtil"
@@ -17,7 +18,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".activities.NetGsonActivity"></activity>
+        <activity android:name=".activities.NetJsonActivity" />
+        <activity android:name=".activities.NetXmlSaxActivity" />
+        <activity android:name=".activities.NetXmlPullActivity" />
+        <activity android:name=".activities.NetHttpGetActivity" />
+        <activity android:name=".activities.NetWebviewActivity" />
         <activity android:name=".activities.MediaVideoActivity" />
         <activity android:name=".activities.MediaAudioActivity" />
         <activity android:name=".activities.MediaCameraActivity" />

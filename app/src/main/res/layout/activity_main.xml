@@ -5,224 +5,312 @@
     android:layout_height="wrap_content"
     android:scrollbars="vertical">
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/serializableActivity4Result"
-            android:text="@string/SerializableActivity4Result"
-            android:textAllCaps="false"
-            android:layout_weight="1"
+        android:layout_height="match_parent">
+        <!--ScrollView can host only one direct child-->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--activity-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/parcelableActivity4Result"
-            android:text="@string/ParcelableActivity4Result"
-            android:textAllCaps="false"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+                <Button
+                    android:id="@+id/serializableActivity4Result"
+                    android:text="@string/SerializableActivity4Result"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/customControl4Title"
-        android:text="@string/CustomControl4Title"
-        android:textAllCaps="false"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/parcelableActivity4Result"
+                    android:text="@string/ParcelableActivity4Result"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <!--UI-->
+            <Button
+                android:id="@+id/customControl4Title"
+                android:text="@string/CustomControl4Title"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <!--ListView-->
+            <LinearLayout
+                android:id="@+id/id_rv"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:id="@+id/id_rv"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/list_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/listview"
+                    android:textAllCaps="false" />
 
-        <Button
-            android:id="@+id/list_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="@string/listview"
-            android:textAllCaps="false" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recycler_view"
+                    android:layout_weight="2"
+                    android:text="@string/recyclerview"
+                    android:textAllCaps="false" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/recycler_view"
-            android:layout_weight="2"
-            android:text="@string/recyclerview"
-            android:textAllCaps="false" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rv_vertview"
+                    android:layout_weight="1"
+                    android:text="@string/rvvert"
+                    android:textAllCaps="false" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/rv_vertview"
-            android:layout_weight="1"
-            android:text="@string/rvvert"
-            android:textAllCaps="false" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rv_waterfallview"
+                    android:layout_weight="2"
+                    android:text="@string/rvWaterfallView"
+                    android:textAllCaps="false" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/rv_waterfallview"
-            android:layout_weight="2"
-            android:text="@string/rvWaterfallView"
-            android:textAllCaps="false" />
+                <Button
+                    android:id="@+id/ui_practice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/uipractice"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+            <!--fragment-->
+            <Button
+                android:id="@+id/frag_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/frag_btn"
+                android:textAllCaps="false" />
+            <!--start:broadcast-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/ui_practice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/uipractice"
-            android:textAllCaps="false" />
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/frag_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/frag_btn"
-        android:textAllCaps="false" />
+                    <Button
+                        android:id="@+id/bc_std"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bc_std"
+                        android:textAllCaps="false" />
 
-    <!--start:broadcast-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/bc_ord"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bc_ord"
+                        android:textAllCaps="false" />
 
-        <Button
-            android:id="@+id/bc_std"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/bc_std"
-            android:textAllCaps="false" />
+                    <Button
+                        android:id="@+id/bc_cut"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bc_cut"
+                        android:textAllCaps="false" />
 
-        <Button
-            android:id="@+id/bc_ord"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/bc_ord"
-            android:textAllCaps="false" />
+                    <Button
+                        android:id="@+id/bc_lcl"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bc_lcl"
+                        android:textAllCaps="false" />
 
-        <Button
-            android:id="@+id/bc_cut"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/bc_cut"
-            android:textAllCaps="false" />
+                </LinearLayout>
 
-        <Button
-            android:id="@+id/bc_lcl"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/bc_lcl"
-            android:textAllCaps="false" />
+                <Button
+                    android:id="@+id/bc_eg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bc_eg"
+                    android:textAllCaps="false" />
+            </LinearLayout>
 
-    </LinearLayout>
+            <!--start:data persistent-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/bc_eg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/bc_eg"
-        android:textAllCaps="false" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dp_file"
+                    android:text="文件"
+                    android:layout_weight="1" />
 
-    <!--start:data persistent-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dp_sp"
+                    android:text="SharedPref"
+                    android:layout_weight="1"
+                    android:textAllCaps="false" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/dp_file"
-            android:text="文件"
-            android:layout_weight="1" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dp_db_cd"
+                    android:text="Db操作"
+                    android:layout_weight="1"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+            <!-- ContentProvider -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/dp_sp"
-            android:text="SharedPref"
-            android:layout_weight="1"
-            android:textAllCaps="false" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rt_perm"
+                    android:layout_weight="1"
+                    android:text="运行时授权" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/dp_db_cd"
-            android:text="Db操作"
-            android:layout_weight="1"
-            android:textAllCaps="false" />
-    </LinearLayout>
-    <!-- ContentProvider -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/read_contect"
+                    android:layout_weight="1"
+                    android:text="读取联系人" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/rt_perm"
-            android:layout_weight="1"
-            android:text="运行时授权" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cust_cp"
+                    android:layout_weight="1"
+                    android:text="访问自定义CP示例" />
+            </LinearLayout>
+            <!--media-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/read_contect"
-            android:layout_weight="1"
-            android:text="读取联系人" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/media_notify"
+                    android:text="通知" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cust_cp"
-            android:layout_weight="1"
-            android:text="访问自定义CP示例" />
-    </LinearLayout>
-    <!--media-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/media_camera"
+                    android:text="拍照" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/media_notify"
-            android:text="通知" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/media_audio"
+                    android:text="播放音频" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/media_camera"
-            android:text="拍照" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/media_video"
+                    android:text="播放视频" />
+            </LinearLayout>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/media_audio"
-            android:text="播放音频" />
+            <!--net-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/media_video"
-            android:text="播放视频" />
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="WebView"
+                        android:id="@+id/net_webview" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Http-GET"
+                        android:id="@+id/net_httpg" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Http-POST"
+                        android:id="@+id/net_httpp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="XML Pull"
+                        android:id="@+id/net_xmlp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="XML SAX"
+                        android:id="@+id/net_xmls" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="JSON"
+                        android:id="@+id/net_json" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="GSON"
+                        android:id="@+id/net_gson" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

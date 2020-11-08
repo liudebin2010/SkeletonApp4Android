@@ -2,31 +2,34 @@ package com.v51das.android.skeletonapp.utils;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
-import android.net.Network;
 import android.net.NetworkInfo;
 import android.widget.Toast;
+
 import com.v51das.android.skeletonapp.inter.HttpCallbackListener;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.NetworkInterface;
 import java.net.URL;
 
 /**
  * 网络工具类
  */
 public class HttpUtil {
-    public static final String TAG="HttpUtil";
-    public static void sendHttpRequest(final String address,final HttpCallbackListener listener){
-        Context ctx=AppCtxUtil.getContext();
-        if (!isNetworkAvailable(ctx)){
-            Toast.makeText(ctx,"网络不可用",Toast.LENGTH_SHORT).show();
+
+    public static final String TAG = "HttpUtil";
+
+    public static void sendHttpGetRequest(final String address, final HttpCallbackListener listener) {
+
+        Context ctx = AppCtxUtil.getContext();
+        if (!isNetworkAvailable(ctx)) {
+            Toast.makeText(ctx, "网络不可用", Toast.LENGTH_SHORT).show();
             return;
         }
 
         new Thread(() -> {
-            HttpURLConnection connection=null;
+            HttpURLConnection connection = null;
             try {
                 URL url=new URL(address);
                 connection= (HttpURLConnection) url.openConnection();

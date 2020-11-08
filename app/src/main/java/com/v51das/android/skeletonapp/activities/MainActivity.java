@@ -102,6 +102,27 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         Button media_video = findViewById(R.id.media_video);
         media_video.setOnClickListener(this);
+
+        Button net_webview = findViewById(R.id.net_webview);
+        net_webview.setOnClickListener(this);
+
+        Button net_httpg = findViewById(R.id.net_httpg);
+        net_httpg.setOnClickListener(this);
+
+        Button net_httpp = findViewById(R.id.net_httpp);
+        net_httpp.setOnClickListener(this);
+
+        Button net_xmlp = findViewById(R.id.net_xmlp);
+        net_xmlp.setOnClickListener(this);
+
+        Button net_xmls = findViewById(R.id.net_xmls);
+        net_xmls.setOnClickListener(this);
+
+        Button net_json = findViewById(R.id.net_json);
+        net_json.setOnClickListener(this);
+
+        Button net_gson = findViewById(R.id.net_gson);
+        net_gson.setOnClickListener(this);
     }
 
     //**********************************************start-菜单********************************//
@@ -244,7 +265,34 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 Intent mvIntent = new Intent(MainActivity.this, MediaVideoActivity.class);
                 startActivity(mvIntent);
                 break;
-
+            case R.id.net_webview:
+                Intent nwvIntent = new Intent(MainActivity.this, NetWebviewActivity.class);
+                startActivity(nwvIntent);
+                break;
+            case R.id.net_httpg:
+                Intent nhttpgIntent = new Intent(MainActivity.this, NetHttpGetActivity.class);
+                startActivity(nhttpgIntent);
+                break;
+            case R.id.net_httpp:
+                Intent nhttppIntent = new Intent(MainActivity.this, NetHttpPostActivity.class);
+                startActivity(nhttppIntent);
+                break;
+            case R.id.net_xmlp:
+                Intent nxmlpIntent = new Intent(MainActivity.this, NetXmlPullActivity.class);
+                startActivity(nxmlpIntent);
+                break;
+            case R.id.net_xmls:
+                Intent nxmlsIntent = new Intent(MainActivity.this, NetXmlSaxActivity.class);
+                startActivity(nxmlsIntent);
+                break;
+            case R.id.net_json:
+                Intent njsonIntent = new Intent(MainActivity.this, NetJsonActivity.class);
+                startActivity(njsonIntent);
+                break;
+            case R.id.net_gson:
+                Intent ngsonIntent = new Intent(MainActivity.this, NetGsonActivity.class);
+                startActivity(ngsonIntent);
+                break;
         }
     }
 
