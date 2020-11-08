@@ -123,6 +123,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         Button net_gson = findViewById(R.id.net_gson);
         net_gson.setOnClickListener(this);
+
+        Button sv_basic = findViewById(R.id.sv_basic);
+        sv_basic.setOnClickListener(this);
     }
 
     //**********************************************start-菜单********************************//
@@ -292,6 +295,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.net_gson:
                 Intent ngsonIntent = new Intent(MainActivity.this, NetGsonActivity.class);
                 startActivity(ngsonIntent);
+                break;
+            case R.id.sv_basic:
+                Intent svbIntent = new Intent(MainActivity.this, SvBasicActivity.class);
+                startActivity(svbIntent);
                 break;
         }
     }

@@ -18,7 +18,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.NetGsonActivity"></activity>
+        <service
+            android:name=".sv.MyIntentService"
+            android:exported="false"></service>
+
+        <activity android:name=".activities.SvBasicActivity" />
+
+        <service
+            android:name=".sv.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".activities.SvEgDownloadActivity"
+            android:label="@string/title_activity_sv_eg_download"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".sv.DownloadService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".activities.NetGsonActivity" />
         <activity android:name=".activities.NetJsonActivity" />
         <activity android:name=".activities.NetXmlSaxActivity" />
         <activity android:name=".activities.NetXmlPullActivity" />

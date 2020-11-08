@@ -20,4 +20,5 @@
     <string name="bc_cut">自定义</string>
     <string name="bc_eg">广播实例：强制下线</string>
     <string name="title_activity_bc_login">BcLoginActivity</string>
+    <string name="title_activity_sv_eg_download">SvEgDownloadActivity</string>
 </resources>
