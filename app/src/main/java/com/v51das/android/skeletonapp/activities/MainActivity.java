@@ -126,6 +126,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         Button sv_basic = findViewById(R.id.sv_basic);
         sv_basic.setOnClickListener(this);
+
+        Button lbs_basic = findViewById(R.id.lbs_basic);
+        lbs_basic.setOnClickListener(this);
+
+
     }
 
     //**********************************************start-菜单********************************//
@@ -299,6 +304,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.sv_basic:
                 Intent svbIntent = new Intent(MainActivity.this, SvBasicActivity.class);
                 startActivity(svbIntent);
+                break;
+            case R.id.lbs_basic:
+                Intent lbsbIntent = new Intent(MainActivity.this, LbsBasicActivity.class);
+                startActivity(lbsbIntent);
                 break;
         }
     }
