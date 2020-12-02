@@ -334,7 +334,24 @@
                     android:id="@+id/lbs_basic"
                     android:text="获取位置" />
             </LinearLayout>
+            <!--MaterialDesgin-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+            </LinearLayout>
+
+            <!--例子：酝欧天气-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/eg_coolweather"
+                    android:text="综合实例：酝欧天气" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

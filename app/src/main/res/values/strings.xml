@@ -21,4 +21,6 @@
     <string name="bc_eg">广播实例：强制下线</string>
     <string name="title_activity_bc_login">BcLoginActivity</string>
     <string name="title_activity_sv_eg_download">SvEgDownloadActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

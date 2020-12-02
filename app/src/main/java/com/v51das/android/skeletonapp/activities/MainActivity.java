@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.v51das.android.skeletonapp.R;
+import com.v51das.android.skeletonapp.egcw.activity.EgCoolWeatherActivity;
 import com.v51das.android.skeletonapp.model.Person4Parcelable;
 import com.v51das.android.skeletonapp.model.Person4Serializable;
 import com.v51das.android.skeletonapp.utils.LogUtil;
@@ -130,7 +131,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         Button lbs_basic = findViewById(R.id.lbs_basic);
         lbs_basic.setOnClickListener(this);
 
-
+        Button eg_coolweather = findViewById(R.id.eg_coolweather);
+        eg_coolweather.setOnClickListener(this);
     }
 
     //**********************************************start-菜单********************************//
@@ -308,6 +310,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.lbs_basic:
                 Intent lbsbIntent = new Intent(MainActivity.this, LbsBasicActivity.class);
                 startActivity(lbsbIntent);
+                break;
+            case R.id.eg_coolweather:
+                Intent egCwIntent = new Intent(MainActivity.this, EgCoolWeatherActivity.class);
+                startActivity(egCwIntent);
                 break;
         }
     }
