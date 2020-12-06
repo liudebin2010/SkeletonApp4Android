@@ -2,6 +2,8 @@ package com.v51das.android.skeletonapp.egcw.util;
 
 import android.text.TextUtils;
 
+import com.google.gson.Gson;
+import com.v51das.android.skeletonapp.egcw.gson.Weather;
 import com.v51das.android.skeletonapp.egcw.model.City;
 import com.v51das.android.skeletonapp.egcw.model.County;
 import com.v51das.android.skeletonapp.egcw.model.Province;
@@ -74,7 +76,7 @@ public class Utility {
      * @param response
      * @return
      */
-    public static boolean handleCountryResponse(String response, int cityId) {
+    public static boolean handleCountyResponse(String response, int cityId) {
         if (!TextUtils.isEmpty(response)) {
             try {
                 JSONArray allCities = new JSONArray(response);
@@ -92,5 +94,23 @@ public class Utility {
             }
         }
         return false;
+    }
+
+    /**
+     * 将返回的JSON数据解析成Weather实体类
+     *
+     * @param response
+     * @return
+     */
+    public static Weather handleWeatherResponse(String response) {
+        try {
+            JSONObject jsonObject = new JSONObject(response);
+            JSONArray jsonArray = jsonObject.getJSONArray("HeWeather");
+            String weatherContent = jsonArray.getJSONObject(0).toString();
+            return new Gson().fromJson(weatherContent, Weather.class);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

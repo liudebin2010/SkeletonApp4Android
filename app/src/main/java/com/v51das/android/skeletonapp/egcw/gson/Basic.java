@@ -9,8 +9,8 @@ public class Basic {
     public String weatherId;
     public Update update;
 
-    private class Update {
+    public class Update {
         @SerializedName("loc")
-        String updateTime;
+        public String updateTime;
     }
 }

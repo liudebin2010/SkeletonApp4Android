@@ -7,20 +7,20 @@ public class Suggestion {
     public Comfort comfort;
     @SerializedName("cw")
     public CarWash carWash;
-    @SerializedName("")
+    @SerializedName("sport")
     public Sport sport;
 
-    private class Comfort {
+    public class Comfort {
         @SerializedName("txt")
         public String info;
     }
 
-    private class CarWash {
+    public class CarWash {
         @SerializedName("txt")
         public String info;
     }
 
-    private class Sport {
+    public class Sport {
         @SerializedName("txt")
         public String info;
     }
