@@ -24,13 +24,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <service
-            android:name=".egcw.sv.AutoUpdateService"
-            android:enabled="true"
-            android:exported="true"></service>
-
-        <activity android:name=".egcw.activity.EgCoolWeatherMainActivity" />
-        <activity android:name=".egcw.activity.EgCoolWeatherActivity" />
 
         <meta-data
             android:name="com.baidu.lbsapi.auth.API_KEY"

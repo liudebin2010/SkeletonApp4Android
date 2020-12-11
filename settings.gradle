@@ -1,2 +1,3 @@
+include ':coolweather'
 include ':app'
 rootProject.name = "SkeletonApp"
