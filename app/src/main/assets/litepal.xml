@@ -6,9 +6,5 @@
     <list>
         <mapping class="com.v51das.android.skeletonapp.model.Book"></mapping>
         <mapping class="com.v51das.android.skeletonapp.model.Category"></mapping>
-
-        <mapping class="com.v51das.android.skeletonapp.egcw.model.Province"></mapping>
-        <mapping class="com.v51das.android.skeletonapp.egcw.model.City"></mapping>
-        <mapping class="com.v51das.android.skeletonapp.egcw.model.County"></mapping>
     </list>
 </litepal>
